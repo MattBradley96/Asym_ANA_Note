@@ -1,0 +1,64 @@
+\section{Charge tagging (qTAG)} \label{sec:qtag}
+Jets are tagged for flavour as discussed in Sec. \ref{subsec:jet_tag}, but for the asymmetry measurement we also need to tag the charge of these jets. The aim of this analysis is to measure the asymmetry up to very high values of $m_{bb}$, however current \lhcb methods for charge tagging are optimised for lower energies. It is also important that the charge tagging procedure is unlikely to generate any fake asymmetries or mistag jets in a way that is difficult to understand and account for.
+
+For this reason we use a simple and robust method similar to that which was used in the previous measurement at \lhcb \cite{LHCb-PAPER-2014-023}, which we shall refer to as qTAG. The basis of this is to use only the muons produced in \decay{b}{\mu X} decays. A notable source of mistagging comes from \decay{b}{\decay{c}{\mu X}} type decays where now the muon and original $b$-quark differ in sign. 
+
+qTAG is applied to jets whose highest \pt displaced ($\chi^2_\text{IP}>16$) track passes muon selection criteria ($\dllmupi>0.5$ and \texttt{isMuon} = \texttt{true}). Only one jet needs to be qTAG in the event as the charge of the other $b$-quark can then be inferred.
+
+A notable source of mistagging comes from \decay{b}{\decay{c}{\mu X}} type decays as now the muon and original $b$-quark would differ in sign. These are suppressed by the qTAG procedure as the muons from this source will have a significantly lower \pt than those that come from the $b$-quark and are hence less likely to be the highest \pt displaced track in the jet. They must, however, still be accounted for and attempts made to minimise their inclusion in the qTAG sample.
+
+To measure the performance of qTAG we use the figure of merit $\varepsilon D^2$, where $\varepsilon$ is the fraction of total events that are tagged, and $D = 1 - 2\omega$ is the dilution factor, with $\omega$ the incorrect tag rate. The dilution factor also relates the measured value of the asymmetry with the true value $\asym_{\text{mea.}} \equiv D \asym_{\text{true}}$. The performance of qTAG should thus be optimised to maximise $\varepsilon D^2$.
+
+
+\subsection{Theoretical qTAG performance}
+To calculate the theoretically expected performance of qTAG the branching fractions of \decay{b}{\mu X} and \decay{b}{\decay{c}{\mu X}} type relevant decays must be used, these are listed in Table \ref{tab:branch_fracs}. As the branching fractions are given in hadronic form the fraction of $b$-quarks found in each hadron must also be accounted for, these are listed in Table \ref{tab:hadronic_fracs}.
+
+\begin{table}[]
+  \caption{Relevant branching fractions for calculating qTAG performance \cite{PDG2020}}.
+\begin{center}
+\begin{tabular}{c|c} 
+Decay & Branching Fraction (\%)\\
+\hline
+\hline
+\decay{\Bp}{\mu^+ X} & 10.99\\
+\decay{\Bz}{\mu^+ X} & 10.33\\
+\decay{\Bs}{\mu^+ X} & 10.2\\
+\decay{\Lbbar}{\mu^+ X} & 10.4\\
+\hline
+\decay{\Bp}{\Dm X} & 9.9\\
+\decay{\Bp}{\Dzb X} & 79\\
+\decay{\Bp}{\Dsm X} & 1.1\\
+\decay{\Bp}{\Lcbar X} & 2.8\\
+\hline
+\decay{\Bz}{\Dm X} & 36.9\\
+\decay{\Bz}{\Dzb X} & 47.4\\
+\decay{\Bz}{\Dsm X} & $<$2.6\\
+\decay{\Bz}{\Lcbar X} & 5\\
+\hline
+\decay{\Dm}{\mu^- X} & 17.6\\
+\decay{\Dzb}{\mu^- X} & 6.8\\
+\decay{\Dsm}{\mu^- X} & 5.4\\
+\decay{\Lcbar}{\mu^- X} & 3.5\\
+\end{tabular}
+\end{center}
+\label{tab:branch_fracs}
+\end{table}
+
+\begin{table}[tb]
+  \caption{$b$ quark hadronic fractions \cite{LHCb-PAPER-2018-050}}
+\begin{center}
+\begin{tabular}{c|c|c} 
+& Hadron & Fraction\\
+\hline
+\hline
+$f_u$ & \Bm & 0.362\\
+$f_d$ & \Bzb & 0.362\\
+$f_s$ & \Bsb & 0.187\\
+$f_b$ & \Lb & 0.088\\
+\end{tabular}
+\end{center}
+\label{tab:hadronic_fracs}
+\end{table}
+
+\subsection{Tests of performance}
+Details of performance tests on simulation / data.

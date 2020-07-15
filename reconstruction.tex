@@ -1,0 +1,40 @@
+\section{Reconstruction and selection}
+\label{sec:reco}
+\subsection{Jet Reconstruction}
+Jets are reconstructed using the algorithm available in the \textit{JetAccessories} package, which applies the particle flow selection and performs the clustering with the anti-$k_T$ algorithm \cite{Cacciari:2008gp}, using a jet radius parameter of $R = 0.5$.
+
+\subsection{Fiducial cuts}
+Two jets are required to have a pseudorapidity in the range $2.2 < \eta < 4.2$, a transverse momentum greater than 20\gev and an angular difference between the two jets in the azimuthal plane of greater than 2.6 radians. These requirements are chosen to ensure that the jets are well defined, within the \lhcb acceptance and likely to be \bbbar events. The requirements are summarised in Table \ref{tab:fiducial}. In Table \ref{tab:fiducial} and the Sections following, the jet with the highest transverse momentum will be referred to as the leading jet and variables relating to it will have a subscript 0, the other jet in the pair will be the sub-leading jet and variables carry the subscript 1.
+
+\begin{table}[tbh]
+\begin{center}
+\begin{tabular}{ c } 
+ \hline
+ $p_{T0}>20\gev$ \\ 
+ $p_{T1}>20\gev$ \\ 
+ $2.2<\eta_0<4.2$ \\
+ $2.2<\eta_1<4.2$ \\
+ $|\Delta \phi| > 2.6$ \\
+ \hline
+\end{tabular}
+\caption{\label{tab:fiducial}Summary of the fiducial cuts applied to the jets.}
+\end{center}
+\end{table}
+
+\subsection{Jet tagging} \label{subsec:jet_tag}
+The standard \lhcb jet tagging algorithm \cite{LHCb-PAPER-2015-016} for identification of beauty and charm quark jets has been used. This tagging reconstructs secondary vertices (SV) using tracks inside and outside the jet and will be referred to as SV-tagging in this note. If an SV is found inside the cone of the jet then it is SV-tagged.
+
+Two boosted decision trees (BDTs) are then used on the SV-tagged jets to determine the flavour of the quark that originated it \cite{Breiman, Roe:2004na, Freund:1997xna}. One BDT distinguishes between light and heavy jets (\bdtlh) and the second distinguishes between $b$- and $c$-jets (\bdtbc). The variables used as input for the BDTs are those related to the SVs that provide the highest discrimination power between the flavours. They are as follows:
+\begin{itemize}
+    \item the SV mass,
+    \item the SV corrected mass,
+    \item the transverse flight distance of the two-body particle closest to the PV and built with tracks that belong to the SV,
+    \item the fraction of the jet \pt carried by the SV,
+    \item the number of tracks that form the SV,
+    \item the number of tracks that form the SV with $\Delta R<0.5$ from the jet axis,
+    \item the total charge of tracks in the SV,
+    \item the SV flight distance $\chi^2$,
+    \item the sum of $\chi^2_{\text{IP}}$ for all the tracks in the SV.
+\end{itemize}
+
+\textit{Need to check the versions of the BDTs that are used etc. as I think these have changed from the cross-section analysis.}

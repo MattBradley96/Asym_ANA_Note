@@ -1,0 +1,15 @@
+\section{Analysis strategy} \label{sec:strategy}
+This analysis will be based on the full Run 1 and Run 2 dataset. To make a measurement of the charge asymmetry in quark production both the quark and antiquark must be detected, and the charge of at least one must be determined. The steps to measure the asymmetry for \bbbar production are as follows:
+\begin{itemize}
+    \item Data events that passed the \textit{HltQEEJetsDiJetSVSV} \hlttwo line, which requires two high transverse momentum jets containting a secondary vertex, are selected.
+    \item Jets are reconstructed offline and the Secondary Vertex (SV) tagging algorithm is used to identify jets that originated from a $b$ quark. Fiducial cuts are also applied and dijet candidates are selected.
+    \item Charge tagging (qTAG) is performed by requiring that the highest \pt displaced track in at least one of the jets is a muon. The charge of the muon is then used to tag the jet as $b$ or $\bar{b}$.
+    \item The events are categorised based on whether the $b$ or $\bar{b}$ has a greater pseudorapidity. They are then binned in the dijet mass ($m_{bb}$) such that the asymmetry in each of these bins can be calculated.
+    \item To correct the measured distributions for detector effects, unfolding procedures are applied. The response matrices, which describe the detector effects, are obtained from simulation.
+\end{itemize}
+\textit{The initial selection of jets is taken from the cross section analysis ANA-note, not sure how to reference this}.
+
+The current binning scheme for dijet mass includes seven bins:
+\begin{equation*}
+    [40,75);\, [75, 85);\, [85, 95);\, [95, 105);\, [105, 150);\, [150, 200);\, [200, 300)
+\end{equation*}
